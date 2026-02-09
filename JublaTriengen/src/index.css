@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-jubla-yellow: #F0C714;
+  --color-jubla-red: #5E1635;
+  --color-jubla-gray: #191919;
+  --color-jubla-black: #000000;
+  --color-jubla-white: #ffffff;
+}

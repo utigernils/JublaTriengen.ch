@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "jubla-yellow": "#F0C714",
+        "jubla-red": "#5E1635",
+        "jubla-gray": "#191919",
+        "jubla-black": "#000000",
+        "jubla-white": "#ffffff",
+      },
+    },
   },
   plugins: [],
 }
