@@ -6,10 +6,11 @@ export default {
       colors: {
         jubla: {
           yellow: '#F3C518',
-          'yellow-dark': '#D4AA0F',
+          red: '#772C33',
           green: '#2D5016',
-          'green-dark': '#1F3A0F',
-          red: '#E63946',
+          white : '#FFFFFF',
+          gray : '#333333',
+          black : '#000000',
         },
       },
       fontFamily: {
