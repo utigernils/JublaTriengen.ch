@@ -1,6 +1,7 @@
 import SectionTitle from '../ui/SectionTitle';
 import EventCard from '../ui/EventCard';
 import Button from '../ui/Button';
+import { ArrowRight } from 'lucide-react';
 
 const highlights = [
   {
@@ -42,7 +43,7 @@ export default function HighlightsSection() {
         </div>
 
         <div className="text-center">
-          <Button variant="secondary">Zum Programm</Button>
+          <Button icon={ArrowRight} >Zum Programm</Button>
         </div>
       </div>
     </section>
