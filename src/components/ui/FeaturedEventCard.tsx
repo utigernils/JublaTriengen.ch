@@ -17,7 +17,7 @@ export default function FeaturedEventCard({
   buttonText = 'Jetzt Mitmachen',
 }: FeaturedEventCardProps) {
   return (
-    <div className="bg-jubla-green rounded-2xl p-8 text-white shadow-xl sticky top-24">
+    <div className="bg-jubla-gray rounded-2xl p-8 text-white shadow-xl sticky top-24">
       <h3 className="font-amatic text-5xl font-bold mb-4">{title}</h3>
       <p className="font-inter font-light mb-6 leading-relaxed">{description}</p>
       <div className="flex items-center gap-2 text-jubla-yellow mb-6">
