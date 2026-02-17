@@ -1,24 +1,20 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/ui/Header';
 import Footer from './components/ui/Footer';
-import HeroSection from './components/sections/HeroSection';
-import FeatureCards from './components/sections/FeatureCards';
-import WelcomeSection from './components/sections/WelcomeSection';
-import AngeboteSection from './components/sections/AngeboteSection';
-import HighlightsSection from './components/sections/HighlightsSection';
-import NewsSection from './components/sections/NewsSection';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <FeatureCards />
-      <WelcomeSection />
-      <AngeboteSection />
-      <HighlightsSection />
-      <NewsSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
