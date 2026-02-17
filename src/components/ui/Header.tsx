@@ -67,7 +67,7 @@ export default function Header() {
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className={`font-inter font-normal transition-colors ${
+                className={`font-mundial font-normal transition-colors ${
                   isScrolled ? 'text-gray-700 hover:text-jubla-yellow' : 'text-white hover:text-jubla-yellow'
                 }`}
               >
@@ -76,7 +76,7 @@ export default function Header() {
             ))}
             <button
               onClick={ctaButton.action}
-              className="bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-inter font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105"
+              className="bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-mundial font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105"
             >
               {ctaButton.label}
             </button>
@@ -98,14 +98,14 @@ export default function Header() {
               <button
                 key={item.sectionId}
                 onClick={() => scrollToSection(item.sectionId)}
-                className="block w-full text-left py-2 text-gray-700 hover:text-jubla-yellow font-inter"
+                className="block w-full text-left py-2 text-gray-700 hover:text-jubla-yellow font-mundial"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={ctaButton.action}
-              className="w-full bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-inter font-semibold px-6 py-3 rounded-full transition-colors"
+              className="w-full bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-mundial font-semibold px-6 py-3 rounded-full transition-colors"
             >
               {ctaButton.label}
             </button>

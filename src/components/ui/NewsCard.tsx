@@ -20,11 +20,11 @@ export default function NewsCard({ image, title, date, excerpt }: NewsCardProps)
       <div className="sm:w-2/3 p-6">
         <div className="flex items-center gap-2 text-gray-500 mb-3">
           <Calendar className="w-4 h-4" />
-          <span className="font-inter font-light text-sm">{date}</span>
+          <span className="font-mundial font-light text-sm">{date}</span>
         </div>
-        <h3 className="font-inter font-semibold text-2xl text-black mb-3">{title}</h3>
-        <p className="font-inter font-light text-gray-600 mb-4">{excerpt}</p>
-        <button className="text-jubla-yellow hover:text-jubla-yellow-dark font-inter font-medium flex items-center gap-2 group">
+        <h3 className="font-mundial font-semibold text-2xl text-black mb-3">{title}</h3>
+        <p className="font-mundial font-light text-gray-600 mb-4">{excerpt}</p>
+        <button className="text-jubla-yellow hover:text-jubla-yellow-dark font-mundial font-medium flex items-center gap-2 group">
           Weiterlesen
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
         </button>

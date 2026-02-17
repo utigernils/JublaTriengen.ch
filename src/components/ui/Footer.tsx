@@ -63,13 +63,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
             <h4 className="font-amatic text-4xl font-bold mb-6">{brandConfig.name}</h4>
-            <p className="font-inter font-light text-gray-300 leading-relaxed">
+            <p className="font-mundial font-light text-gray-300 leading-relaxed">
               {brandConfig.description}
             </p>
           </div>
 
           <div>
-            <h5 className="font-inter font-semibold text-lg mb-4">Kontakt</h5>
+            <h5 className="font-mundial font-semibold text-lg mb-4">Kontakt</h5>
             <ul className="space-y-3">
               {contactInfo.map((contact, index) => {
                 const Icon = contact.icon;
@@ -79,12 +79,12 @@ export default function Footer() {
                     {contact.href ? (
                       <a
                         href={contact.href}
-                        className="font-inter font-light text-gray-300 hover:text-jubla-yellow transition-colors"
+                        className="font-mundial font-light text-gray-300 hover:text-jubla-yellow transition-colors"
                       >
                         {contact.text}
                       </a>
                     ) : (
-                      <span className="font-inter font-light text-gray-300">{contact.text}</span>
+                      <span className="font-mundial font-light text-gray-300">{contact.text}</span>
                     )}
                   </li>
                 );
@@ -93,13 +93,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="font-inter font-semibold text-lg mb-4">Lager & Infos</h5>
+            <h5 className="font-mundial font-semibold text-lg mb-4">Lager & Infos</h5>
             <ul className="space-y-3">
               {infoLinks.map((link, index) => (
                 <li key={index}>
                   <a
                     href={link.href}
-                    className="font-inter font-light text-gray-300 hover:text-jubla-yellow transition-colors"
+                    className="font-mundial font-light text-gray-300 hover:text-jubla-yellow transition-colors"
                   >
                     {link.label}
                   </a>
@@ -109,7 +109,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h5 className="font-inter font-semibold text-lg mb-4">Folge uns</h5>
+            <h5 className="font-mundial font-semibold text-lg mb-4">Folge uns</h5>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
@@ -130,7 +130,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="font-inter font-light text-gray-400 text-sm">
+            <p className="font-mundial font-light text-gray-400 text-sm">
               © {new Date().getFullYear()} {brandConfig.name}. Alle Rechte vorbehalten.
             </p>
             <div className="flex gap-6">
@@ -138,7 +138,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href={link.href}
-                  className="font-inter font-light text-gray-400 hover:text-jubla-yellow text-sm transition-colors"
+                  className="font-mundial font-light text-gray-400 hover:text-jubla-yellow text-sm transition-colors"
                 >
                   {link.label}
                 </a>

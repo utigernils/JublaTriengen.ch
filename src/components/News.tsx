@@ -40,15 +40,15 @@ export default function News() {
                 <div className="sm:w-2/3 p-6">
                   <div className="flex items-center gap-2 text-gray-500 mb-3">
                     <Calendar className="w-4 h-4" />
-                    <span className="font-inter font-light text-sm">{news.date}</span>
+                    <span className="font-mundial font-light text-sm">{news.date}</span>
                   </div>
-                  <h3 className="font-inter font-semibold text-2xl text-black mb-3">
+                  <h3 className="font-mundial font-semibold text-2xl text-black mb-3">
                     {news.title}
                   </h3>
-                  <p className="font-inter font-light text-gray-600 mb-4">
+                  <p className="font-mundial font-light text-gray-600 mb-4">
                     {news.excerpt}
                   </p>
-                  <button className="text-jubla-yellow hover:text-jubla-yellow-dark font-inter font-medium flex items-center gap-2 group">
+                  <button className="text-jubla-yellow hover:text-jubla-yellow-dark font-mundial font-medium flex items-center gap-2 group">
                     Weiterlesen
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -62,14 +62,14 @@ export default function News() {
               <h3 className="font-amatic text-5xl font-bold mb-4">
                 Bastelnachmittag
               </h3>
-              <p className="font-inter font-light mb-6 leading-relaxed">
+              <p className="font-mundial font-light mb-6 leading-relaxed">
                 Komm vorbei und gestalte deine eigenen Kunstwerke! Für Kinder von 6-12 Jahren.
               </p>
               <div className="flex items-center gap-2 text-jubla-yellow mb-6">
                 <Calendar className="w-5 h-5" />
-                <span className="font-inter font-light">22. April 2024, 14:00 Uhr</span>
+                <span className="font-mundial font-light">22. April 2024, 14:00 Uhr</span>
               </div>
-              <button className="w-full bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-inter font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
+              <button className="w-full bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-mundial font-semibold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105">
                 Jetzt Mitmachen
               </button>
             </div>

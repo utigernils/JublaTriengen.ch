@@ -43,7 +43,7 @@ export default function ContentImageSection({
             {paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className={`font-inter font-light text-lg text-gray-700 leading-relaxed ${
+                className={`font-mundial font-light text-lg text-gray-700 leading-relaxed ${
                   index === paragraphs.length - 1 ? (button ? 'mb-8' : '') : 'mb-6'
                 }`}
               >

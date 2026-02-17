@@ -19,12 +19,12 @@ export default function EventCard({ image, title, date, description }: EventCard
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
       <div className="p-6 bg-white">
-        <h3 className="font-inter font-semibold text-2xl text-black mb-2">{title}</h3>
+        <h3 className="font-mundial font-semibold text-2xl text-black mb-2">{title}</h3>
         <div className="flex items-center gap-2 text-jubla-yellow mb-3">
           <Calendar className="w-4 h-4" />
-          <span className="font-inter font-light text-sm">{date}</span>
+          <span className="font-mundial font-light text-sm">{date}</span>
         </div>
-        <p className="font-inter font-light text-gray-600">{description}</p>
+        <p className="font-mundial font-light text-gray-600">{description}</p>
       </div>
     </div>
   );

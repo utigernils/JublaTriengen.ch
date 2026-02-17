@@ -31,12 +31,12 @@ export default function Hero() {
             <br />
             Lagerleben.
           </h1>
-          <p className="font-inter font-light text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl">
+          <p className="font-mundial font-light text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl">
             Erlebe unvergessliche Momente in der Natur mit der Jubla Triengen.
           </p>
           <button
             onClick={() => scrollToSection('about')}
-            className="group bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-inter font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+            className="group bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-mundial font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
           >
             Mehr erfahren
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -32,7 +32,7 @@ export default function HeroSection() {
             <br />
             Lagerleben.
           </h1>
-          <p className="font-inter font-light text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl">
+          <p className="font-mundial font-light text-xl sm:text-2xl text-gray-200 mb-8 max-w-2xl">
             Erlebe unvergessliche Momente in der Natur mit der Jubla Triengen.
           </p>
           <Button onClick={() => scrollToSection('about')} icon={ArrowRight}>

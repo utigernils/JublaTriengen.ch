@@ -16,19 +16,19 @@ export default function Welcome() {
             <h2 className="font-amatic text-6xl sm:text-7xl font-bold text-black mb-6">
               Willkommen bei der Jubla Triengen
             </h2>
-            <p className="font-inter font-light text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className="font-mundial font-light text-lg text-gray-700 mb-6 leading-relaxed">
               Die Jubla Triengen ist mehr als nur eine Jugendorganisation. Wir sind eine
               Gemeinschaft von Abenteurern, die gemeinsam die Natur entdecken, Freundschaften
               fürs Leben schliessen und unvergessliche Erinnerungen schaffen.
             </p>
-            <p className="font-inter font-light text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="font-mundial font-light text-lg text-gray-700 mb-8 leading-relaxed">
               Bei uns stehen Spass, Kreativität und das gemeinsame Erleben im Mittelpunkt.
               Ob bei wöchentlichen Gruppenstunden, aufregenden Ferienlagern oder besonderen
               Events – bei der Jubla ist für jedes Kind etwas dabei.
             </p>
             <button
               onClick={() => scrollToSection('angebote')}
-              className="group bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-inter font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              className="group bg-jubla-yellow hover:bg-jubla-yellow-dark text-black font-mundial font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               Unsere Angebote
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

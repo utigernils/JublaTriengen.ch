@@ -19,7 +19,7 @@ export default function Button({
   className = '',
 }: ButtonProps) {
   const baseStyles =
-    'font-inter font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-center justify-center';
+    'font-mundial font-semibold px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center gap-2 text-center justify-center';
 
   const variantStyles = {
     primary: 'bg-jubla-yellow hover:bg-jubla-yellow-dark text-black',

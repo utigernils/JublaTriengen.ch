@@ -13,13 +13,13 @@ export default function FeatureCard({ icon: Icon, title, subtitle, description }
       <div className="w-16 h-16 bg-jubla-yellow rounded-full flex items-center justify-center mb-6">
         <Icon className="w-8 h-8 text-black" />
       </div>
-      <h3 className="font-inter font-semibold text-2xl text-black mb-2">
+      <h3 className="font-mundial font-semibold text-2xl text-black mb-2">
         {title}
       </h3>
-      <p className="font-inter font-light text-jubla-yellow mb-3">
+      <p className="font-mundial font-light text-jubla-yellow mb-3">
         {subtitle}
       </p>
-      <p className="font-inter font-light text-gray-600">
+      <p className="font-mundial font-light text-gray-600">
         {description}
       </p>
     </div>
