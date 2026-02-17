@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, Phone, MapPin, LucideIcon } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface ContactItem {
   icon: LucideIcon;
@@ -62,7 +63,10 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h4 className="font-amatic text-4xl font-bold mb-6">{brandConfig.name}</h4>
+            <div className="flex items-center gap-2 mb-6">
+              <Logo className="w-14 h-14 text-jubla-yellow" />
+              <h4 className="font-amatic text-4xl font-bold">{brandConfig.name}</h4>
+            </div>
             <p className="font-mundial font-light text-gray-300 leading-relaxed">
               {brandConfig.description}
             </p>

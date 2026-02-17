@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, TreePine } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface NavItem {
   label: string;
@@ -8,7 +9,7 @@ interface NavItem {
 
 const brandConfig = {
   name: 'Jubla Triengen',
-  icon: TreePine,
+  icon: Logo,
 };
 
 const navItems: NavItem[] = [
@@ -52,7 +53,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-2">
-            <brandConfig.icon className={`w-8 h-8 ${isScrolled ? 'text-jubla-green' : 'text-white'}`} />
+            <brandConfig.icon className={`w-14 h-14 ${isScrolled ? 'text-jubla-yellow' : 'text-white'}`} />
             <span
               className={`font-amatic text-3xl font-bold ${
                 isScrolled ? 'text-black' : 'text-white'
