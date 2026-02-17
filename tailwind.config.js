@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         amatic: ['"Amatic SC"', 'cursive'],
+        mundial: ['"Mundial"', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
     },
