@@ -6,13 +6,15 @@ interface EventCardProps {
   title: string;
   date: string;
   description: string;
+  onClick?: () => void;
 }
 
-export default function EventCard({ image, title, date, description }: EventCardProps) {
+export default function EventCard({ image, title, date, description, onClick }: EventCardProps) {
   return (
     <Card
       image={image}
       title={title}
+      onClick={onClick}
       subtitle={
         <div className="flex items-center gap-2 text-jubla-yellow">
           <Calendar className="w-4 h-4" />
