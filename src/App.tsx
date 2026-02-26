@@ -4,6 +4,7 @@ import Footer from './components/ui/Footer';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Leaders from './pages/Leaders';
+import LeaderDetail from './pages/LeaderDetail';
 import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/leaders" element={<Leaders />} />
+          <Route path="/leaders/:id" element={<LeaderDetail />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/activities/:id" element={<ActivityDetail />} />
           <Route path="*" element={<NotFound />} />
