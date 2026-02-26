@@ -13,6 +13,8 @@ import About from './pages/About';
 import Gallery from './pages/Gallery';
 import AlbumDetail from './pages/AlbumDetail';
 import Contact from './pages/Contact';
+import Impressum from './pages/Impressum';
+import DataProtection from './pages/DataProtection';
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/gallery/:id" element={<AlbumDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<DataProtection />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
