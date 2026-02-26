@@ -8,6 +8,8 @@ import LeaderDetail from './pages/LeaderDetail';
 import Activities from './pages/Activities';
 import ActivityDetail from './pages/ActivityDetail';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
+import AlbumDetail from './pages/AlbumDetail';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/leaders/:id" element={<LeaderDetail />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/activities/:id" element={<ActivityDetail />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/:id" element={<AlbumDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
