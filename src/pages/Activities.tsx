@@ -12,18 +12,13 @@ export default function Activities() {
     <div className="min-h-screen bg-gray-50">
       <PageHero 
         image="https://images.unsplash.com/photo-1502086223501-681a6a508d52?auto=format&fit=crop&q=80"
-        title="Unsere Aktivitäten"
-        subtitle="Erlebe Jubla"
+        title="Jahres Programm"
       />
       
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-8">
-          <SectionTitle 
-            subtitle="Was wir tun" 
-            title="Jahresprogramm & Events" 
-            align="center"
-          />
-          <SectionText align="center" className="mb-16 max-w-2xl mx-auto">
+          <SectionTitle>Was läuft unter dem Jahr ?</SectionTitle>
+          <SectionText className="mt-4">
             Hier findest du eine Übersicht über unsere kommenden und vergangenen Aktivitäten. Klicke auf eine Karte, um mehr zu erfahren.
           </SectionText>
 
