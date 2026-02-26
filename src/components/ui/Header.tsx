@@ -1,10 +1,12 @@
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
 
 interface NavItem {
   label: string;
-  sectionId: string;
+  sectionId?: string;
+  path?: string;
 }
 
 const brandConfig = {
@@ -13,20 +15,22 @@ const brandConfig = {
 };
 
 const navItems: NavItem[] = [
-  { label: 'Über uns', sectionId: 'about' },
-  { label: 'Angebote', sectionId: 'angebote' },
-  { label: 'Programm', sectionId: 'highlights' },
-  { label: 'Galerie', sectionId: 'news' },
+  { label: 'Über uns', sectionId: 'about', path: '/about' },
+  { label: 'Angebote', path: '/angebote' },
+  { label: 'Programm', sectionId: 'highlights', path: '/activities' }, 
+  { label: 'News', path: '/posts' },
 ];
-
-const ctaButton = {
-  label: 'Mitmachen',
-  action: () => console.log('CTA clicked'),
-};
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const ctaButton = {
+    label: 'Mitmachen',
+    action: () => navigate('/contact'),
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,11 +40,32 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
+  const handleNavigation = (item: NavItem) => {
+    setIsMobileMenuOpen(false);
+    
+    if (item.path) {
+      if (item.path.startsWith('/#')) {
+          // Handle hash navigation if needed, but simple path generic here
+      }
+      navigate(item.path);
+      // If there's a sectionId and we're navigating to home, we might want to scroll after nav
+      // For now, let's keep it simple: direct link or scroll
+    } else if (item.sectionId) {
+       // logic for scroll only if on home
+       if (location.pathname !== '/home' && location.pathname !== '/') {
+           navigate(`/?section=${item.sectionId}`); // Simplified approach, or just navigate home
+           setTimeout(() => {
+                const element = document.getElementById(item.sectionId!);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+           }, 100);
+       } else {
+            const element = document.getElementById(item.sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+       }
     }
   };
 
@@ -52,7 +77,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <brandConfig.icon className={`w-14 h-14 ${isScrolled ? 'text-jubla-yellow' : 'text-white'}`} />
             <span
               className={`font-amatic text-3xl font-bold ${
@@ -61,13 +86,13 @@ export default function Header() {
             >
               {brandConfig.name}
             </span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
-                key={item.sectionId}
-                onClick={() => scrollToSection(item.sectionId)}
+                key={item.label}
+                onClick={() => handleNavigation(item)}
                 className={`font-mundial font-normal transition-colors ${
                   isScrolled ? 'text-gray-700 hover:text-jubla-yellow' : 'text-white hover:text-jubla-yellow'
                 }`}
@@ -97,8 +122,8 @@ export default function Header() {
           <div className="px-4 py-4 space-y-3">
             {navItems.map((item) => (
               <button
-                key={item.sectionId}
-                onClick={() => scrollToSection(item.sectionId)}
+                key={item.label}
+                onClick={() => handleNavigation(item)}
                 className="block w-full text-left py-2 text-gray-700 hover:text-jubla-yellow font-mundial"
               >
                 {item.label}

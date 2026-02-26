@@ -1,24 +1,50 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/ui/Header';
 import Footer from './components/ui/Footer';
-import HeroSection from './components/sections/HeroSection';
-import FeatureCards from './components/sections/FeatureCards';
-import WelcomeSection from './components/sections/WelcomeSection';
-import AngeboteSection from './components/sections/AngeboteSection';
-import HighlightsSection from './components/sections/HighlightsSection';
-import NewsSection from './components/sections/NewsSection';
+import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import Leaders from './pages/Leaders';
+import LeaderDetail from './pages/LeaderDetail';
+import Activities from './pages/Activities';
+import ActivityDetail from './pages/ActivityDetail';
+import Offerings from './pages/Offerings';
+import OfferingDetail from './pages/OfferingDetail';
+import Posts from './pages/Posts';
+import PostDetail from './pages/PostDetail';
+import About from './pages/About';
+import Gallery from './pages/Gallery';
+import AlbumDetail from './pages/AlbumDetail';
+import Contact from './pages/Contact';
+import Impressum from './pages/Impressum';
+import DataProtection from './pages/DataProtection';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <FeatureCards />
-      <WelcomeSection />
-      <AngeboteSection />
-      <HighlightsSection />
-      <NewsSection />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/leaders" element={<Leaders />} />
+          <Route path="/leaders/:id" element={<LeaderDetail />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/activities/:id" element={<ActivityDetail />} />
+          <Route path="/angebote" element={<Offerings />} />
+          <Route path="/angebote/:id" element={<OfferingDetail />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/posts/:id" element={<PostDetail />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/:id" element={<AlbumDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<DataProtection />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

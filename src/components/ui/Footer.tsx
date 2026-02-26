@@ -45,6 +45,8 @@ const infoLinks: LinkItem[] = [
   { label: 'Herbstlager', href: '#' },
   { label: 'Gruppenstunden', href: '#' },
   { label: 'Downloads', href: '#' },
+  { label: 'Impressum', href: '/impressum' },
+  { label: 'Datenschutz', href: '/datenschutz' },
 ];
 
 const socialLinks: SocialLink[] = [
