@@ -21,10 +21,10 @@ export default function NewsSection() {
   return (
     <section id="news" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle>Neues aus der Jubla</SectionTitle>
+        <SectionTitle className='mb-6'>Neues aus der Jubla</SectionTitle>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-6">
+          <div className="lg:col-span-full space-y-6">
             {newsItems.map((news, index) => (
               <NewsCard
                 key={index}
@@ -34,16 +34,6 @@ export default function NewsSection() {
                 excerpt={news.excerpt}
               />
             ))}
-          </div>
-
-          <div className="lg:col-span-1">
-            <FeaturedEventCard
-              title="Bastelnachmittag"
-              description="Komm vorbei und gestalte deine eigenen Kunstwerke! Für Kinder von 6-12 Jahren."
-              date="22. April 2024"
-              time="14:00 Uhr"
-              buttonText="Jetzt Mitmachen"
-            />
           </div>
         </div>
       </div>

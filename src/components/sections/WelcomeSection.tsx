@@ -9,7 +9,7 @@ const welcomeContent = {
     'Bei uns stehen Spass, Kreativität und das gemeinsame Erleben im Mittelpunkt. Ob bei wöchentlichen Gruppenstunden, aufregenden Ferienlagern oder besonderen Events – bei der Jubla ist für jedes Kind etwas dabei.',
   ],
   image: {
-    src: 'https://images.pexels.com/photos/1320701/pexels-photo-1320701.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    src: 'https://image.jimcdn.com/app/cms/image/transf/none/path/sb21156d07b64a771/image/iaadd36084aabac03/version/1741809698/image.jpg',
     alt: 'Kinder beim Wandern',
   },
   button: {

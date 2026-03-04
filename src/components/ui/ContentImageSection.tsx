@@ -38,8 +38,8 @@ export default function ContentImageSection({
   return (
     <section id={id} className={`py-24 ${backgroundColor}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className={contentOrder}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          <div className={contentOrder + ' h-full'}>
             <h2 className="font-amatic text-6xl sm:text-7xl font-bold text-black mb-6">
               {title}
             </h2>
@@ -61,12 +61,12 @@ export default function ContentImageSection({
             )}
           </div>
 
-          <div className={`relative ${imageOrder}`}>
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
+          <div className={`relative h-full ${imageOrder}`}>
+            <div className="rounded-3xl overflow-hidden shadow-2xl h-full">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover overflow-hidden"
               />
             </div>
             {decorativeCircle && (

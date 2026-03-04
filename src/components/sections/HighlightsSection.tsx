@@ -27,8 +27,9 @@ const highlights = [
 export default function HighlightsSection() {
   return (
     <section id="highlights" className="py-24 bg-white">
+      <SectionTitle className='mb-6'>Unsere nächsten Highlights</SectionTitle>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle>Unsere nächsten Highlights</SectionTitle>
+        
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {highlights.map((highlight, index) => (
