@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageHero from '../components/ui/PageHero';
 import ContentImageSection from '../components/ui/ContentImageSection';

@@ -1,12 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import Masonry from '../components/ui/Masonry';
 import { ArrowLeft } from 'lucide-react';
-import Button from '../components/ui/Button';
 import PageHero from '../components/ui/PageHero';
 
-// Mock data generator for album details
+
 const getAlbumPhotos = (albumId: string) => {
-  // In a real app, you would fetch this based on ID
   return Array.from({ length: 12 }).map((_, i) => ({
     id: `${albumId}-${i}`,
     img: `https://picsum.photos/seed/${albumId}${i}/600/${Math.floor(Math.random() * 300) + 300}?grayscale`,
