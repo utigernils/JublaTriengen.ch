@@ -18,10 +18,12 @@ import AlbumDetail from "./pages/AlbumDetail";
 import Contact from "./pages/Contact";
 import Impressum from "./pages/Impressum";
 import DataProtection from "./pages/DataProtection";
+import ClickSpark from "./components/ui/ClickSpark";
 
 function App() {
   return (
     <BrowserRouter>
+    <ClickSpark>
       <ScrollToTop />
       <div className="min-h-screen">
         <Header />
@@ -45,6 +47,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+    </ClickSpark>
     </BrowserRouter>
   );
 }
